@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"A File Icon",
+		"Agila Theme",
+		"ayu",
+		"BeautifyRust",
+		"Devastate",
+		"Generic Config",
+		"GitHub Theme",
+		"gruvbox",
+		"Markdown Extended",
+		"Material Theme",
+		"Nord",
+		"Package Control",
+		"Pretty JSON",
+		"Pretty YAML",
+		"rainbow_csv",
+		"Rust Enhanced",
+		"RustFmt",
+		"RustFormat",
+		"Theme - Afterglow",
+		"Theme - Brogrammer",
+		"Theme - Flatland",
+		"Theme - SoDaReloaded",
+	],
+}

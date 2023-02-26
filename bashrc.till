@@ -1,0 +1,96 @@
+# --------------------------------------------------------------------------------
+# ALIASES
+# --------------------------------------------------------------------------------
+
+# common aliases
+alias dir='ls'
+alias la='ls -la'
+alias ll='ls -l'
+alias lx='exa -lbhma --time-style=long-iso --git --color-scale'
+
+alias python='python3'
+alias py='python3'
+alias pip='pip3'
+
+alias jn='jupyter notebook'
+
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
+
+alias source_bash='source ~/.bashrc'
+alias bash_source='source ~/.bashrc'
+
+# Run last command with root
+alias please='sudo $(fc -ln -1)'
+alias fuck='sudo $(fc -ln -1)'
+
+# Package manager
+#alias ubuntu_upgrade='sudo apt-get update && sudo apt-get upgrade'
+#alias arch_upgrade='sudo pacman -Syu --noconfirm'
+alias fedora_upgrade='sudo dnf upgrade -y'
+
+# dir shortcuts
+#alias hugo_tquin='cd /mnt/c/Users/tyler/Documents/Code/hugo/tquin'
+
+# --------------------------------------------------------------------------------
+# WSL2
+# --------------------------------------------------------------------------------
+
+# Export the current WSL2 IP for use in host Win for Linux webservers
+#WSL2_IPADDRESS=$(ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1)
+#export WSL2_IPADDRESS
+
+# Debug build hugo with the correct bind URL
+#function hugo_server() {
+#	hugo server --bind $WSL2_IPADDRESS --baseURL=http://$WSL2_IPADDRESS -D -F --gc -w
+#}
+
+# For WSL2, disable annoying Windows 'bell' sounds when hitting end-of-file, etc. navigating bash
+# This is done in ~/.inputrc
+#source ~/.inputrc
+
+# --------------------------------------------------------------------------------
+# PROGRAM OPTIONS
+# --------------------------------------------------------------------------------
+
+# Make `grep` colourful
+alias grep='grep --color=always'
+alias egrep='egrep --color=always'
+
+# Make `ls` colourful
+export LS_OPTS='--color=auto'
+alias ls='ls ${LS_OPTS}'
+
+export MOZ_ENABLE_WAYLAND=1
+
+# --------------------------------------------------------------------------------
+# FUNCTIONS
+# --------------------------------------------------------------------------------
+
+# Easy history grep
+function search_history() {
+  history | grep $1
+}
+alias hist='search_history'
+
+# Print any TODO or XXX lines in a file (case insensitive)
+function todos() {
+    echo -e "\\n--- XXXs"
+    grep -nri 'XXX'
+    echo -e "\\n--- To Dos"
+    grep -nri 'TODO'
+    echo ""
+}
+
+# --------------------------------------------------------------------------------
+# MISC
+# --------------------------------------------------------------------------------
+
+#Use this for when the boss comes around to look busy.
+alias busy="cat /dev/urandom | hexdump -C | grep 'be ef'"
+
+# Use starship shell prompt styling for zsh
+eval "$(starship init zsh)"
+
+alias rust_test="cargo test -- --include-ignored --nocapture --test-threads=1"

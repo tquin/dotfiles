@@ -1,0 +1,13 @@
+{
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"ignored_packages":
+	[
+		"Rust",
+		"Vintage",
+	],
+	"theme": "Adaptive.sublime-theme",
+
+	// 2021-08-24
+	"font_face": "JetBrains Mono",
+	"font_size": 11,
+}
