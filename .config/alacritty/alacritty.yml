@@ -2,7 +2,7 @@
 
 # Import additional configuration files
 import:
-  - ~/code/dotfiles/alacritty/alacritty-colorscheme/themes/one_dark.yaml
+  - ~/code/dotfiles/.config/alacritty/alacritty-colorscheme/themes/one_dark.yaml
   # dark_pastels, tokyo-night, remedy_dark
 
 shell:
@@ -10,7 +10,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux atach || tmux"
+    - "tmux attach || tmux"
 
 #  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
 
