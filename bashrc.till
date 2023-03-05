@@ -6,7 +6,7 @@
 alias dir='ls'
 alias la='ls -la'
 alias ll='ls -l'
-alias lx='exa -lbhma --time-style=long-iso --git --color-scale'
+alias lx='exa -lbha --git --color-scale --icons --no-time'
 
 alias python='python3'
 alias py='python3'
