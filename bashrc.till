@@ -91,6 +91,10 @@ function todos() {
 alias busy="cat /dev/urandom | hexdump -C | grep 'be ef'"
 
 # Use starship shell prompt styling for zsh
-eval "$(starship init zsh)"
+if [[ $SHELL =~ zsh ]]; then
+  eval "$(starship init zsh)"
+elif [[ $SHELL =~ bash ]]; then
+  eval "$(starship init bash)"
+fi
 
 alias rust_test="cargo test -- --include-ignored --nocapture --test-threads=1"
