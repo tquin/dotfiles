@@ -14,16 +14,11 @@ alias pip='pip3'
 
 alias jn='jupyter notebook'
 
-alias ..='cd ..'
-alias ...='cd ..; cd ..'
-alias ....='cd ..; cd ..; cd ..'
-
 alias source_bash='source ~/.bashrc'
 alias bash_source='source ~/.bashrc'
 
 # Run last command with root
 alias please='sudo $(fc -ln -1)'
-alias fuck='sudo $(fc -ln -1)'
 
 # Package manager
 #alias ubuntu_upgrade='sudo apt-get update && sudo apt-get upgrade'
@@ -32,6 +27,12 @@ alias fedora_upgrade='sudo dnf upgrade -y'
 
 # dir shortcuts
 #alias hugo_tquin='cd /mnt/c/Users/tyler/Documents/Code/hugo/tquin'
+
+# --------------------------------------------------------------------------------
+# PATH
+# --------------------------------------------------------------------------------
+
+export PATH="$PATH:/home/till/.cargo/bin"
 
 # --------------------------------------------------------------------------------
 # WSL2
@@ -55,8 +56,9 @@ alias fedora_upgrade='sudo dnf upgrade -y'
 # --------------------------------------------------------------------------------
 
 # Make `grep` colourful
-alias grep='grep --color=always'
-alias egrep='egrep --color=always'
+export GREP_OPTS='--color=always'
+alias grep='grep ${GREP_OPTS}'
+alias egrep='egrep ${GREP_OPTS}'
 
 # Make `ls` colourful
 export LS_OPTS='--color=auto'
