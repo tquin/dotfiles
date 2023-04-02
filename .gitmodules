@@ -1,12 +1,12 @@
 [submodule ".config/alacritty/alacritty-colorscheme"]
 	path = .config/alacritty/alacritty-colorscheme
-	url = git@github.com/toggle-corp/alacritty-colorscheme.git
+	url = ssh://git@github.com/toggle-corp/alacritty-colorscheme.git
 [submodule ".tmux/plugins/tmux"]
 	path = .tmux/plugins/tmux
-	url = git@github.com:dracula/tmux.git
+	url = ssh://git@github.com/dracula/tmux.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
+	url = ssh://git@github.com/tmux-plugins/tpm.git
 [submodule ".tmux/plugins/tmux-sensible"]
 	path = .tmux/plugins/tmux-sensible
-	url = git@github.com:tmux-plugins/tmux-sensible.git
+	url = ssh://git@github.com/tmux-plugins/tmux-sensible.git
