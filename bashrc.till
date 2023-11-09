@@ -6,7 +6,7 @@
 alias dir='ls'
 alias la='ls -la'
 alias ll='ls -l'
-alias lx='exa -lbha --git --color-scale --icons --no-time'
+alias lx='eza -lbha --git --color-scale --icons --no-time'
 
 alias python='python3'
 alias py='python3'
@@ -20,7 +20,7 @@ alias bash_source='source ~/.bashrc'
 # Run last command with root
 alias please='sudo $(fc -ln -1)'
 
-# Package manager
+# Package managers
 if [ $(command -v apt-get) ]; then
     alias easy_upgrade="sudo apt-get update && \
                         sudo apt-get upgrade -y && \
@@ -49,8 +49,8 @@ fi
 # PATH
 # ----- ----- ----- ----- -----
 
-export PATH="$PATH:~/.cargo/bin"
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # ----- ----- ----- ----- -----
 # WSL2
