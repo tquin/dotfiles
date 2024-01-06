@@ -22,4 +22,5 @@ prompt pure
 source ~/code/dotfiles/bashrc.till
 
 # Use the syntax highlighting AUR package
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/till/code/dotfiles/bashrc.till
