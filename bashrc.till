@@ -6,7 +6,13 @@
 alias dir='ls'
 alias la='ls -la'
 alias ll='ls -l'
-alias lx='eza -lbha --git --color-scale --icons --no-time'
+
+if [ $(command -v eza) ]; then
+    LX_COMMAND="eza"
+elif [ $(command -v exa) ]; then
+    LX_COMMAND="exa"
+fi
+alias lx='$LX_COMMAND -lbha --git --color-scale --icons --no-time'
 
 alias python='python3'
 alias py='python3'
@@ -21,17 +27,22 @@ alias bash_source='source ~/.bashrc'
 alias please='sudo $(fc -ln -1)'
 
 # Package managers
+EASY_UPGRADE=""
 if [ $(command -v apt-get) ]; then
-    alias easy_upgrade="sudo apt-get update && \
-                        sudo apt-get upgrade -y && \
-                        sudo snap refresh"
-elif [ $(command -v dnf) ]; then
-    alias easy_upgrade="sudo dnf update && \
-                        sudo dnf upgrade -y \
-                        && flatpak update -y"
-elif [ $(command -v pacman) ]; then
-    alias easy_upgrade="sudo pacman -Syu --noconfirm"
-fi
+    EASY_UPGRADE+="sudo apt-get update && \
+                   sudo apt-get upgrade -y && "
+fi; if [ $(command -v snap) ]; then
+    EASY_UPGRADE+="sudo snap refresh && "
+fi; if [ $(command -v dnf) ]; then
+    EASY_UPGRADE+="sudo dnf update && \
+                   sudo dnf upgrade -y && "
+fi; if [ $(command -v flatpak) ]; then
+    EASY_UPGRADE+="flatpak update -y "
+fi; if [ $(command -v pacman) ]; then
+    EASY_UPGRADE+="sudo pacman -Syu --noconfirm "
+fi;
+EASY_UPGRADE+="echo All upgrades done!"
+alias easy_upgrade="$EASY_UPGRADE"
 
 # dir shortcuts
 #alias hugo_tquin='cd /mnt/c/Users/tyler/Documents/Code/hugo/tquin'
