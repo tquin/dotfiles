@@ -1,0 +1,70 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
+import = [
+  "~/code/dotfiles/.config/alacritty/alacritty-colorscheme/themes/one_dark.toml",
+  # dark_pastels, tokyo-night, remedy_dark
+]
+
+# Live config reload (changes require restart)
+live_config_reload = true
+
+[shell]
+  program = "/usr/bin/zsh"
+  args = [
+    "-l",
+    "-c",
+    "tmux attach || tmux",
+  ]
+
+#  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+# Font configuration
+[font]
+  # Point size
+  size = 13.0
+
+  # Normal (roman) font face
+  [font.normal]
+    # Default (Linux/BSD): monospace
+    family = "JetBrains Mono Nerd Font"
+    # The `style` can be specified to pick a specific face.
+    style = "Regular"
+
+  # Bold font face
+  [font.bold]
+    family = "JetBrains Mono Nerd Font"
+    style = "Bold"
+
+  # Italic font face
+  [font.italic]
+    family = "JetBrains Mono Nerd Font"
+    style = "Italic"
+
+  # Bold italic font face
+  [font.bold_italic]
+    family = "JetBrains Mono Nerd Font"
+    style = "Bold Italic"
+
+#  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+# If `true`, bold text is drawn using the bright color variants.
+[colors]
+    draw_bold_text_with_bright_colors = false
+
+#  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+[bell]
+  # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
+  # disable the visual bell animation.
+  duration = 0
+
+  # This program is executed whenever the bell is rung.
+  # When set to `command: None`, no command will be executed.
+  command = "None"
+
+#  ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+[window]
+  # Background opacity
+  opacity = 0.95
