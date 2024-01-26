@@ -37,9 +37,9 @@ fi; if [ $(command -v dnf) ]; then
     EASY_UPGRADE+="sudo dnf update && \
                    sudo dnf upgrade -y && "
 fi; if [ $(command -v flatpak) ]; then
-    EASY_UPGRADE+="flatpak update -y "
+    EASY_UPGRADE+="flatpak update -y && "
 fi; if [ $(command -v pacman) ]; then
-    EASY_UPGRADE+="sudo pacman -Syu --noconfirm "
+    EASY_UPGRADE+="sudo pacman -Syu --noconfirm && "
 fi;
 EASY_UPGRADE+="echo All upgrades done!"
 alias easy_upgrade="$EASY_UPGRADE"
