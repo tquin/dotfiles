@@ -14,9 +14,9 @@ compinit
 # End of lines added by compinstall
 
 # Use the pure prompt theme
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+#fpath+=$HOME/.zsh/pure
+#autoload -U promptinit; promptinit
+#prompt pure
 
 # Usual bash aliases/etc
 source ~/code/dotfiles/bashrc.till
