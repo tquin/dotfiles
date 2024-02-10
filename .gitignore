@@ -1,7 +1,3 @@
-.config/sublime-text/Backup
-.config/sublime-text/Log
-.config/sublime-text/Local
-
 .config/alacritty/backup_2021-08-23_alacritty.yml
 
 .tmux/**.log

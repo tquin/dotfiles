@@ -6,7 +6,6 @@
 
 ## Other Programs
 * `ln -s ~/.config/i3 dotfiles/i3`
-* `ln -s ~/.config/sublime-text dotfiles/sublime-text`
 * `ln -s ~/.config/alacritty dotfiles/alacritty`
 * `ln -s ~/.tmux.conf dotfiles/tmux/tmux.conf`
 * `ln -s ~/.vimrc dotfiles/.vimrc`
