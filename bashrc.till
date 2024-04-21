@@ -44,16 +44,13 @@ fi;
 EASY_UPGRADE+="echo All upgrades done!"
 alias easy_upgrade="$EASY_UPGRADE"
 
-# dir shortcuts
-#alias hugo_tquin='cd /mnt/c/Users/tyler/Documents/Code/hugo/tquin'
-
 # Editor choice
 if [ $(command -v micro) ]; then
-    export EDITOR=/usr/bin/micro
+    export EDITOR=$(which micro)
 elif [ $(command -v nano) ]; then
-    export EDITOR=/usr/bin/nano
+    export EDITOR=$(which nano)
 elif [ $(command -v vim) ]; then
-    export EDITOR=/usr/bin/vim
+    export EDITOR=$(which vim)
 fi
 
 # ----- ----- ----- ----- -----
@@ -80,6 +77,9 @@ export PATH="$PATH:$HOME/.local/bin"
 # This is done in ~/.inputrc
 #source ~/.inputrc
 
+# dir shortcuts
+#alias hugo_tquin='cd /mnt/c/Users/tyler/Documents/Code/hugo/tquin'
+
 # ----- ----- ----- ----- -----
 # PROGRAM OPTIONS
 # ----- ----- ----- ----- -----
@@ -96,7 +96,7 @@ alias ls='ls ${LS_OPTS}'
 export MOZ_ENABLE_WAYLAND=1
 
 # ----- ----- ----- ----- -----
-# FUNCTIONS
+# MISC
 # ----- ----- ----- ----- -----
 
 # Easy history grep
@@ -114,10 +114,6 @@ function todos() {
     echo ""
 }
 
-# ----- ----- ----- ----- -----
-# MISC
-# ----- ----- ----- ----- -----
-
 alias busy="cat /dev/urandom | hexdump -C | grep 'be ef'"
 
 # Use starship shell prompt styling for zsh
@@ -128,3 +124,9 @@ elif [[ $SHELL =~ bash ]]; then
 fi
 
 alias rust_test="cargo test -- --include-ignored --nocapture --test-threads=1"
+
+function grepr() {
+    grep -riE "$1" . \
+        --exclude-dir=.git \
+        --exclude-dir=.fact_cache
+}
