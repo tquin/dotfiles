@@ -26,6 +26,9 @@ alias bash_source='source ~/.bashrc'
 # Run last command with root
 alias please='sudo $(fc -ln -1)'
 
+alias rscp='rsync -aP'
+alias rsmv='rsync -aP --remove-source-files'
+
 # Package managers
 EASY_UPGRADE=""
 if [ $(command -v apt-get) ]; then
@@ -85,7 +88,7 @@ export PATH="$PATH:$HOME/.local/bin"
 # ----- ----- ----- ----- -----
 
 # Make `grep` colourful
-export GREP_OPTS='--color=always'
+export GREP_OPTS='--color=auto'
 alias grep='grep ${GREP_OPTS}'
 alias egrep='egrep ${GREP_OPTS}'
 
