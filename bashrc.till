@@ -133,5 +133,7 @@ alias rust_test="cargo test -- --include-ignored --nocapture --test-threads=1"
 function grepr() {
     grep -riE "$1" . \
         --exclude-dir=.git \
-        --exclude-dir=.fact_cache
+        --exclude-dir=.fact_cache \
+        --exclude-dir=target/release/deps \
+        --exclude-dir=target/debug/deps
 }
