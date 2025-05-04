@@ -29,6 +29,8 @@ alias please='sudo $(fc -ln -1)'
 alias rscp='rsync -aP'
 alias rsmv='rsync -aP --remove-source-files'
 
+alias codium="flatpak run com.vscodium.codium "
+
 # Package managers
 EASY_UPGRADE=""
 if [ $(command -v apt-get) ]; then
