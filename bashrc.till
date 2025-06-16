@@ -2,17 +2,18 @@
 # ALIASES
 # ----- ----- ----- ----- -----
 
-# common aliases
-alias dir='ls'
 alias la='ls -la'
 alias ll='ls -l'
 
-if [ $(command -v eza) ]; then
-    LX_COMMAND="eza"
-elif [ $(command -v exa) ]; then
-    LX_COMMAND="exa"
+if [ $(command -v bat) ]; then
+	alias cat='bat'
 fi
-alias lx='$LX_COMMAND -lbha --git --color-scale --icons --no-time'
+
+if [ $(command -v eza) ]; then
+    alias lx='eza -lbha --git --color-scale --icons --no-time'
+elif [ $(command -v exa) ]; then
+    alias lx='exa -lbha --git --color-scale --icons --no-time'
+fi
 
 alias python='python3'
 alias py='python3'

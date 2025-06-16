@@ -1,3 +1,4 @@
 .config/alacritty/backup_2021-08-23_alacritty.yml
 
 .tmux/**.log
+.config/micro/buffers
